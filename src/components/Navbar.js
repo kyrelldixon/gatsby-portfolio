@@ -41,7 +41,7 @@ const TopNav = ({ location, handleClick }) => (
       <a href="#" onClick={handleClick}>Menu</a>
     </NavLeft>
     <NavCenter>
-      <a href="#">Logo</a>
+      <Link to="/">Logo</Link>
     </NavCenter>
     <NavRight>
       <a href="#">Email</a>

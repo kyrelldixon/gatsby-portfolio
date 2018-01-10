@@ -7,9 +7,11 @@ const Page = styled.div`
   position: relative;
   background-color: #292929;
   padding: 150px 65px;
+  height: 100vh;
 
   ${ media.tablet`
     margin-left: 0;
+    padding: 80px 40px;
   `}
 `;
 
