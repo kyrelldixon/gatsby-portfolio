@@ -10,7 +10,9 @@ const HeaderWrapper = styled.header`
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   width: 33%;
+  max-width: 320px;
   height: 100%;
   padding: 30px 40px;
 `;

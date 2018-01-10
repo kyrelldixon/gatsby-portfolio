@@ -15,7 +15,6 @@ const NavItem = styled.li`
   font-size: 1.2em;
   text-transform: uppercase;
   color: rgba(0,0,0,0.65);
-  transition: border-color .1s,color .1s;
 `;
 
 const Nav = ({ location }) => (

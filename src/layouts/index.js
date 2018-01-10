@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import Header from '../components/Header';
-import Page from '../components/Page';
+import Page from '../components/Pages/Page';
 
 import './normalize-7.0.0.css';
 import '../utils/global-styles';
