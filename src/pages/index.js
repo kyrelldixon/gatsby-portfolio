@@ -16,7 +16,7 @@ const Home = () => (
     <PageDetails>
       This is the base of operations, the homepage. 
       This is where I get your attention. BANG! Got it? Good.
-      </PageDetails>
+    </PageDetails>
   </HomeWrapper>
 )
 
