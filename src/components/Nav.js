@@ -25,16 +25,16 @@ const Nav = ({ location }) => (
         <Link active={location === withPrefix("/")} to="/">Home</Link>
       </NavItem>
       <NavItem>
-        <Link to="/page-2">Services</Link>
+        <Link active={location === withPrefix("/services")} to="/services">Services</Link>
       </NavItem>
       <NavItem>
-        <Link to="/">Portfolio</Link>
+        <Link active={location === withPrefix("/work")} to="/work">Portfolio</Link>
       </NavItem>
       <NavItem>
-        <Link to="/">Blog</Link>
+        <Link active={location === withPrefix("/blog")} to="/blog">Blog</Link>
       </NavItem>
       <NavItem>
-        <Link to="/">Contact</Link>
+        <Link active={location === withPrefix("/contact")} to="/contact">Contact</Link>
       </NavItem>
     </NavItems>
   </NavWrapper>
