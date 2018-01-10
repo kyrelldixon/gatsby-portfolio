@@ -20,7 +20,7 @@ class App extends Component {
     super(props);
   }
   
-  state = {}
+  state = {  }
 
   render() {
     const { pathname } = this.props.location;

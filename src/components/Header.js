@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { media } from '../utils/media';
 
 import Nav from './Nav';
 
@@ -15,6 +16,10 @@ const HeaderWrapper = styled.header`
   max-width: 320px;
   height: 100%;
   padding: 30px 40px;
+
+  ${ media.tablet`
+    display: none;
+  `}
 `;
 const HeaderTop = styled.div`
   flex-basis: 25%;
