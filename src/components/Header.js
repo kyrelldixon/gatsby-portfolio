@@ -13,16 +13,23 @@ const HeaderWrapper = styled.header`
   left: 0;
   bottom: 0;
   width: 33%;
-  max-width: 320px;
   height: 100%;
   padding: 30px 40px;
 
   ${ media.tablet`
-    display: none;
+    display: ${props => props.mobileNavActive ? 'flex' : 'none'};
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
   `}
 `;
 const HeaderTop = styled.div`
   flex-basis: 25%;
+
+  ${ media.tablet`
+    display: none;
+  `}
 `;
 const Logo = styled.h1`
   margin-top: 0;
@@ -35,11 +42,15 @@ const HeaderDetails = styled.p`
 `;
 const HeaderBottom = styled.div`
   flex-basis: 25%;
+
+  ${ media.tablet`
+    display: none;
+  `}
 `;
 const Email = styled.span``;
 
-const Header = ({ location }) => (
-  <HeaderWrapper>
+const Header = ({ location, mobileNavActive }) => (
+  <HeaderWrapper mobileNavActive={mobileNavActive}>
     <HeaderTop>
       <Logo>Logo</Logo>
       <HeaderDetails>
@@ -48,7 +59,7 @@ const Header = ({ location }) => (
         Some Third Detail About Me
       </HeaderDetails>
     </HeaderTop>
-    <Nav location={location}/>
+    <Nav mobileNavActive={mobileNavActive} location={location}/>
     <HeaderBottom>
       <HeaderDetails>
         For more info or to see if my services can help your business, you can contact me at:

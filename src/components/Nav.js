@@ -2,9 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from './Link';
 import { withPrefix } from 'gatsby-link';
+import { media } from '../utils/media';
 
 const NavWrapper = styled.nav`
   flex-basis: 50%;
+
+  ${ media.tablet`
+    width: 100%;
+    flex-basis: auto;
+    text-align: center;
+    font-size: 1.7em;
+  `}
+  color: rgba(0,0,0,0.65);
 `;
 const NavItems = styled.ul`
   margin: 0;
@@ -14,11 +23,11 @@ const NavItem = styled.li`
   margin: 20px 0;
   font-size: 1.2em;
   text-transform: uppercase;
-  color: rgba(0,0,0,0.65);
+  color: inherit;
 `;
 
-const Nav = ({ location }) => (
-  <NavWrapper>
+const Nav = ({ location, mobileNavActive }) => (
+  <NavWrapper mobileNavActive={mobileNavActive}>
     <NavItems>
       <NavItem>
         <Link active={location === withPrefix("/")} to="/">Home</Link>

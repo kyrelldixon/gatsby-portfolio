@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import Header from '../components/Header';
+import Navbar from '../components/Navbar'
 import Page from '../components/Pages/Page';
 
 import './normalize-7.0.0.css';
@@ -20,11 +21,19 @@ class App extends Component {
     super(props);
   }
   
-  state = {  }
+  state = { mobileNavActive: false }
+
+  handleClick = () => {
+    const { mobileNavActive } = this.state;
+    this.setState({ mobileNavActive: !mobileNavActive });
+  }
 
   render() {
     const { pathname } = this.props.location;
+    const { mobileNavActive } = this.state;
+
     return (
+
       <AppWrapper>
         <Helmet
           title="Kyrell Dixon"
@@ -33,7 +42,8 @@ class App extends Component {
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        <Header location={pathname}/>
+        <Navbar handleClick={this.handleClick}/>
+        <Header mobileNavActive={mobileNavActive} location={pathname}/>
         <Page>
           {this.props.children()}
         </Page>
