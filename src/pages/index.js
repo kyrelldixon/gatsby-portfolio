@@ -12,4 +12,4 @@ const Home = () => (
   </HomeWrapper>
 )
 
-export default Home
+export default Home;

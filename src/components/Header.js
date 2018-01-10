@@ -31,7 +31,7 @@ const HeaderBottom = styled.div`
 `;
 const Email = styled.span``;
 
-const Header = () => (
+const Header = ({ location }) => (
   <HeaderWrapper>
     <HeaderTop>
       <Logo>Logo</Logo>
@@ -41,7 +41,7 @@ const Header = () => (
         Some Third Detail About Me
       </HeaderDetails>
     </HeaderTop>
-    <Nav />
+    <Nav location={location}/>
     <HeaderBottom>
       <HeaderDetails>
         For more info or to see if my services can help your business, you can contact me at:
