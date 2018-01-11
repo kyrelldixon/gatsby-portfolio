@@ -35,13 +35,18 @@ const NavCenter = styled.div`
   flex-basis: 50%;
 `;
 
+const Logo = styled.div`
+  font-size: inherit;
+  color: white;
+`;
+
 const Navbar = ({ location, handleClick }) => (
   <NavbarWrapper>
     <NavLeft>
       <Link to={null} href="#" handleClick={handleClick}>Menu</Link>
     </NavLeft>
     <NavCenter>
-      <Link to="/">Logo</Link>
+      <Logo><Link color="inherit" to="/">Logo</Link></Logo>
     </NavCenter>
     <NavRight>
       <Link to={null} href="#">Email</Link>

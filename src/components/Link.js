@@ -12,7 +12,7 @@ const BaseLink = css`
 
 const GatsbyLink = styled(gatsbyLink)`
   ${BaseLink};
-  color: ${colors.font.darkGrey};
+  color: ${props => props.color || colors.font.darkGrey };
   ${props => props.active ? colors.font.gradient : ''};
   /* ${props => props.active ? colors.border.gradient : ''}; */
 
@@ -32,11 +32,11 @@ const NormalLink = styled.a.attrs({
 
 const Link = ({ children, to, href, active, handleClick, ...rest }) => 
   (to === null) ? (
-    <NormalLink onClick={handleClick} href={href}>
+    <NormalLink onClick={handleClick} href={href} {...rest}>
       {children}
     </NormalLink>
   ) : (
-      <GatsbyLink active={active} to={to}>
+      <GatsbyLink active={active} to={to} {...rest}>
         {children}
       </GatsbyLink>
     );

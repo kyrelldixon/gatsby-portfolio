@@ -17,7 +17,6 @@ const Page = styled.div`
 
   ${ media.tablet`
     margin-left: ${sizes.sidebarWidth.tablet};
-    padding: 80px 40px;
   `}
 `;
 
