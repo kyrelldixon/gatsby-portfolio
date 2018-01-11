@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar'
 import Page from '../components/Pages/Page';
+import Footer from '../components/Footer';
 
 import './normalize-7.0.0.css';
 import '../utils/global-styles';
@@ -46,6 +47,7 @@ class App extends Component {
         <Page>
           {this.props.children()}
         </Page>
+        <Footer />
       </AppWrapper>
     )
   }

@@ -5,6 +5,7 @@ import { sizes } from '../utils/sizes';
 import { colors } from '../utils/colors';
 
 import Nav from './Nav';
+import Email from './Email';
 
 const fadeIn = keyframes`
   from {
@@ -81,18 +82,6 @@ const HeaderBottom = styled.div`
     display: none;
   `}
 `;
-const Email = styled.span`
-  text-transform: uppercase;
-  font-size: 0.8em;
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  color: ${colors.font.darkGrey};
-  border-bottom: 2px solid ${colors.font.darkGrey};
-`;
-
-const Highlight = styled.span`
-  ${colors.font.gradient}
-`;
 
 const Header = ({ location, mobileNavActive, handleClick }) => (
   <HeaderWrapper mobileNavActive={mobileNavActive}>
@@ -109,7 +98,7 @@ const Header = ({ location, mobileNavActive, handleClick }) => (
       <HeaderDetails>
         For more info or to see if my services can help your business, you can contact me at:
       </HeaderDetails>
-      <Email><Highlight>hello</Highlight>@kyrelldixon.com</Email>
+      <Email />
     </HeaderBottom>
   </HeaderWrapper>
 )
