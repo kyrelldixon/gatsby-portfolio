@@ -43,23 +43,38 @@ const NavItem = styled.li`
   color: inherit;
 `;
 
-const Nav = ({ location, mobileNavActive }) => (
+const Nav = ({ location, mobileNavActive, handleClick }) => (
   <NavWrapper mobileNavActive={mobileNavActive}>
     <NavItems>
       <NavItem>
-        <Link active={location === withPrefix("/")} to="/">Home</Link>
+        <Link
+          active={location === withPrefix("/")}
+          to="/"
+          onClick={handleClick}>Home</Link>
       </NavItem>
       <NavItem>
-        <Link active={location === withPrefix("/services")} to="/services">Services</Link>
+        <Link
+          active={location === withPrefix("/services")}
+          to="/services"
+          onClick={handleClick}>Services</Link>
       </NavItem>
       <NavItem>
-        <Link active={location === withPrefix("/work")} to="/work">Portfolio</Link>
+        <Link
+          active={location === withPrefix("/work")}
+          to="/work"
+          onClick={handleClick}>Portfolio</Link>
       </NavItem>
       <NavItem>
-        <Link active={location === withPrefix("/blog")} to="/blog">Blog</Link>
+        <Link
+          active={location === withPrefix("/blog")}
+          to="/blog"
+          onClick={handleClick}>Blog</Link>
       </NavItem>
       <NavItem>
-        <Link active={location === withPrefix("/contact")} to="/contact">Contact</Link>
+        <Link
+          active={location === withPrefix("/contact")}
+          to="/contact"
+          onClick={handleClick}>Contact</Link>
       </NavItem>
     </NavItems>
   </NavWrapper>

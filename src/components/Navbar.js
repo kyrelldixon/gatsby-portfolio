@@ -40,6 +40,9 @@ const NavCenter = styled.div`
 const Logo = styled.div`
   font-size: inherit;
   color: white;
+  letter-spacing: -0.01em;
+  word-spacing: -0.1em;
+  font-weight: bold;
 `;
 
 const MenuToggle = styled.button`
@@ -55,7 +58,7 @@ const Navbar = ({ location, handleClick, mobileNavActive }) => (
       <MenuToggle onClick={handleClick}>Menu</MenuToggle>
     </NavLeft>
     <NavCenter>
-      <Logo><Link active={false} color="inherit" to="/">Logo</Link></Logo>
+      <Logo><Link active={false} color="inherit" to="/">K. Dixon</Link></Logo>
     </NavCenter>
     <NavRight>
       <Link to={null} href="mailto:hello@kyrelldixon.com">Email</Link>

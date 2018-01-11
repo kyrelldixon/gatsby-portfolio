@@ -42,7 +42,7 @@ class App extends Component {
           ]}
         />
         <Navbar handleClick={this.handleClick} mobileNavActive={mobileNavActive}/>
-        <Header mobileNavActive={mobileNavActive} location={pathname}/>
+        <Header handleClick={this.handleClick} mobileNavActive={mobileNavActive} location={pathname}/>
         <Page>
           {this.props.children()}
         </Page>

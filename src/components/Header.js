@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { media } from '../utils/media';
 import { sizes } from '../utils/sizes';
+import { colors } from '../utils/colors';
 
 import Nav from './Nav';
 
@@ -68,7 +69,7 @@ const Logo = styled.h1`
   font-weight: bold;
 `;
 const HeaderDetails = styled.p`
-  color: rgba(0,0,0,0.45);
+  color: ${colors.font.xlightGrey};
   font-size: .8em;
   line-height: 1.6em;
   margin-bottom: 1.4em;
@@ -82,7 +83,7 @@ const HeaderBottom = styled.div`
 `;
 const Email = styled.span``;
 
-const Header = ({ location, mobileNavActive }) => (
+const Header = ({ location, mobileNavActive, handleClick }) => (
   <HeaderWrapper mobileNavActive={mobileNavActive}>
     <HeaderTop>
       <Logo>K. Dixon</Logo>
@@ -92,7 +93,7 @@ const Header = ({ location, mobileNavActive }) => (
         Some Third Detail About Me
       </HeaderDetails>
     </HeaderTop>
-    <Nav mobileNavActive={mobileNavActive} location={location}/>
+    <Nav handleClick={handleClick} mobileNavActive={mobileNavActive} location={location}/>
     <HeaderBottom>
       <HeaderDetails>
         For more info or to see if my services can help your business, you can contact me at:
