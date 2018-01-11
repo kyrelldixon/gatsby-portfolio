@@ -1,51 +1,45 @@
-import styled from 'styled-components';
-import GatsbyLink from 'gatsby-link';
+import React from 'react';
+import styled, { css } from 'styled-components';
+import gatsbyLink from 'gatsby-link';
+import { colors } from '../utils/colors';
 
-const Link = styled(GatsbyLink) `
+const BaseLink = css`
+  display: inline-block;
   text-decoration: none;
-  color: ${props => props.active ? 'rgba(0,0,0,0.9)' : 'inherit'};
-  border-bottom: ${props => props.active ? '2px solid black' : 'none'};
-  transition: border-color .1s,color .1s;
+  cursor: pointer;
+  color: inherit;
+`;
+
+const GatsbyLink = styled(gatsbyLink)`
+  ${BaseLink};
+  color: ${colors.font.darkGrey};
+  ${props => props.active ? colors.font.gradient : ''};
+  /* ${props => props.active ? colors.border.gradient : ''}; */
+
 
   &:hover {
-    color: rgba(0,0,0,0.9);
-    border-bottom: 2px solid black;
+    ${colors.font.gradient}
+    /* ${colors.border.gradient} */
   }
 `;
 
+const NormalLink = styled.a.attrs({
+  to: null,
+  active: false
+})`
+  ${BaseLink}
+`;
+
+const Link = ({ children, to, href, active, handleClick, ...rest }) => 
+  (to === null) ? (
+    <NormalLink onClick={handleClick} href={href}>
+      {children}
+    </NormalLink>
+  ) : (
+      <GatsbyLink active={active} to={to}>
+        {children}
+      </GatsbyLink>
+    );
+
+
 export default Link;
-
-// import React from 'react';
-// import styled from 'styled-components';
-// import UnstyledLink from 'gatsby-link';
-
-// export const StyledLink = styled.a`
-//   display: inline-block;
-//   text-decoration: none;
-//   color: ${props => props.active ? 'rgba(0,0,0,0.9)' : 'inherit'};
-//   border-bottom: ${props => props.active ? '2px solid black' : 'none'};
-//   transition: border-color .1s,color .1s;
-//   cursor: pointer;
-  
-//   &:hover {
-//     color: rgba(0,0,0,0.9);
-//     border-bottom: 2px solid black;
-//   }
-// `
-
-// const Link = ({ children, className, unstyled, ...rest }) => {
-//   let Child = StyledLink;
-//   if (unstyled) {
-//     Child = 'a';
-//   }
-
-//   return (
-//     <UnstyledLink {...rest}>
-//       <Child href={rest.href} className={className}>
-//         {children}
-//       </Child>
-//     </UnstyledLink>
-//   )
-// }
-
-// export default Link;

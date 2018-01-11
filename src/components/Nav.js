@@ -7,21 +7,30 @@ import { media } from '../utils/media';
 const NavWrapper = styled.nav`
   flex-basis: 50%;
 
-  ${ media.tablet`
+  ${ media.handheld`
     width: 100%;
     flex-basis: auto;
     text-align: center;
     font-size: 1.7em;
   `}
+  /* ${ media.tablet`
+    width: 100%;
+    flex-basis: auto;
+    text-align: center;
+    font-size: 1.7em;
+  `} */
   color: rgba(0,0,0,0.65);
 `;
 const NavItems = styled.ul`
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 const NavItem = styled.li`
   list-style: none;
   margin: 20px 0;
-  font-size: 1.2em;
+  font-size: 1.4em;
   text-transform: uppercase;
   color: inherit;
 `;

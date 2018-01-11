@@ -1,16 +1,22 @@
 import styled from 'styled-components';
 import { sizes } from '../../utils/sizes';
 import { media } from '../../utils/media';
+import { colors } from '../../utils/colors';
 
 const Page = styled.div`
-  margin-left: 33%;
+  margin-left: ${sizes.sidebarWidth.desktop};
   position: relative;
-  background-color: #292929;
+  background: ${colors.background};
   padding: 150px 65px;
-  height: 100vh;
+  min-height: 100vh;
+
+  ${ media.handheld`
+    margin-left: 0;
+    padding: 80px 40px;
+  `}
 
   ${ media.tablet`
-    margin-left: 0;
+    margin-left: ${sizes.sidebarWidth.tablet};
     padding: 80px 40px;
   `}
 `;

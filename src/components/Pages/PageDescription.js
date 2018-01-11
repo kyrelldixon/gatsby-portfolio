@@ -5,7 +5,7 @@ const PageDescription = styled.h1`
   font-size: 4em;
   letter-spacing: -.02em;
 
-  ${ media.tablet`
+  ${ media.handheld`
     text-align: center;
     font-size: 3em;
   `}

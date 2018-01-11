@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'gatsby-link';
 import PageTitle from '../components/Pages/PageTitle';
 import PageDescription from '../components/Pages/PageDescription';
 import PageDetails from '../components/Pages/PageDetails';

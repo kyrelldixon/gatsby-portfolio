@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { media } from '../utils/media';
 import Link from './Link';
 
-const Navbar = styled.header`
+const NavbarWrapper = styled.header`
   display: none;
 
-  ${ media.tablet`
+  ${ media.handheld`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,18 +35,18 @@ const NavCenter = styled.div`
   flex-basis: 50%;
 `;
 
-const TopNav = ({ location, handleClick }) => (
-  <Navbar>
+const Navbar = ({ location, handleClick }) => (
+  <NavbarWrapper>
     <NavLeft>
-      <a href="#" onClick={handleClick}>Menu</a>
+      <Link to={null} href="#" handleClick={handleClick}>Menu</Link>
     </NavLeft>
     <NavCenter>
       <Link to="/">Logo</Link>
     </NavCenter>
     <NavRight>
-      <a href="#">Email</a>
+      <Link to={null} href="#">Email</Link>
     </NavRight>
-  </Navbar>
+  </NavbarWrapper>
 )
 
-export default TopNav;
+export default Navbar;
