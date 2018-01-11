@@ -42,16 +42,23 @@ const Logo = styled.div`
   color: white;
 `;
 
+const MenuToggle = styled.button`
+  color: ${props => props.color || 'inherit'};
+  border: none;
+  background: none;
+  font-size: inherit;
+`;
+
 const Navbar = ({ location, handleClick, mobileNavActive }) => (
   <NavbarWrapper mobileNavActive={mobileNavActive}>
     <NavLeft>
-      <Link to={null} href="#" handleClick={handleClick}>Menu</Link>
+      <MenuToggle onClick={handleClick}>Menu</MenuToggle>
     </NavLeft>
     <NavCenter>
       <Logo><Link color="inherit" to="/">Logo</Link></Logo>
     </NavCenter>
     <NavRight>
-      <Link to={null} href="#">Email</Link>
+      <Link to={null} href="mailto:hello@kyrelldixon.com">Email</Link>
     </NavRight>
   </NavbarWrapper>
 )
