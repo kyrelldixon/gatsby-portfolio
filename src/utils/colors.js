@@ -10,7 +10,8 @@ export const colors = {
   font: {
     white: '#fffafa',
     darkGrey: 'rgb(0,0,0,0.61)',
-    lightGrey: 'rgb(0,0,0,0.4)',
+    lightGrey: '#9c9c9c',
+    xlightGrey: '#bbb',
     black: 'rgb(0,0,0,0.9)',
     gradient: css`
       /* background: linear-gradient(#4cb8c4, #3cd3ad); */
