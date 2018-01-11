@@ -9,6 +9,9 @@ const PageTitle = styled.h5`
   line-height: 1.8em;
   ${colors.font.gradient};
 
+  ${ media.tablet`
+    font-size: .9em;
+  `}
   ${ media.handheld`
     text-align: center;
     font-size: .9em;
