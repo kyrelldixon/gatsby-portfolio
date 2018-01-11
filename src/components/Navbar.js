@@ -18,7 +18,7 @@ const NavbarWrapper = styled.header`
 
   z-index: 3;
   height: 50px;
-  color: white;
+  color: ${props => props.mobileNavActive ? 'black' : 'white'};
   padding: 0 20px;
 `;
 
@@ -40,8 +40,8 @@ const Logo = styled.div`
   color: white;
 `;
 
-const Navbar = ({ location, handleClick }) => (
-  <NavbarWrapper>
+const Navbar = ({ location, handleClick, mobileNavActive }) => (
+  <NavbarWrapper mobileNavActive={mobileNavActive}>
     <NavLeft>
       <Link to={null} href="#" handleClick={handleClick}>Menu</Link>
     </NavLeft>

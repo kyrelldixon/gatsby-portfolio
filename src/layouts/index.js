@@ -41,7 +41,7 @@ class App extends Component {
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        <Navbar handleClick={this.handleClick}/>
+        <Navbar handleClick={this.handleClick} mobileNavActive={mobileNavActive}/>
         <Header mobileNavActive={mobileNavActive} location={pathname}/>
         <Page>
           {this.props.children()}
