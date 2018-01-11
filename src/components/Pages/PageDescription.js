@@ -10,7 +10,7 @@ const PageDescription = styled.h1`
 
   ${ media.handheld`
     text-align: center;
-    font-size: 3em;
+    font-size: 2.6em;
   `}
   ${ media.tablet`
     font-size: 2.9em;

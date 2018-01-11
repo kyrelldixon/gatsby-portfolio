@@ -12,7 +12,8 @@ const Page = styled.div`
 
   ${ media.handheld`
     margin-left: 0;
-    padding: 80px 40px;
+    padding: 5em 1.7em 4em;
+    min-height: auto;
   `}
 
   ${ media.tablet`

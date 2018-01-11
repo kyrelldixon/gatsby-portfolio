@@ -8,7 +8,8 @@ export const colors = {
   highlight: '#7DF9FF',
   gradient: gradientHighlight,
   font: {
-    white: '#e0e0e0',
+    white: '#fff',
+    offWhite: '#e0e0e0',
     darkGrey: 'rgb(0,0,0,0.61)',
     lightGrey: '#9c9c9c',
     xlightGrey: '#bbb',

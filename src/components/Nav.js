@@ -41,6 +41,11 @@ const NavItem = styled.li`
   font-size: 1.4em;
   text-transform: uppercase;
   color: inherit;
+
+  ${ media.handheld`
+    margin: 0.6em 0;
+    font-size: 1.05em;
+  `}
 `;
 
 const Nav = ({ location, mobileNavActive, handleClick }) => (
