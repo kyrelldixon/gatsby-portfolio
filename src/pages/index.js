@@ -4,9 +4,35 @@ import PageTitle from '../components/Pages/PageTitle';
 import PageDescription from '../components/Pages/PageDescription';
 import PageDetails from '../components/Pages/PageDetails';
 import Animated from '../components/Animated';
+import Link from '../components/Link';
+import { colors } from '../utils/colors';
 
 const HomeWrapper = styled.div`
   color: white;
+`;
+
+const ButtonGroup = styled.div`
+  margin: 3.75em auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+const ButtonLink = styled(Link)`
+  padding: 0.5em;
+  margin-right: 2em;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+
+  &:hover {
+    -webkit-text-fill-color: inherit;
+    -webkit-background-clip: inherit;
+  }
+
+  ${colors.border.gradient};
+  ${colors.font.gradient};
 `;
 
 const Home = () => (
@@ -22,6 +48,12 @@ const Home = () => (
         This is the base of operations, the homepage.
         This is where I get your attention. BANG! Got it? Good.
       </PageDetails>
+    </Animated>
+    <Animated delay={450}>
+      <ButtonGroup>
+        <ButtonLink color={colors.font.white} to={"/work"}>See My Work</ButtonLink>
+        <ButtonLink color={colors.font.white} to={null} href="mailto:hello@kyrelldixon.com">Get in Touch</ButtonLink>
+      </ButtonGroup>
     </Animated>
   </HomeWrapper>
 )

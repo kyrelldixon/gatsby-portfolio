@@ -8,7 +8,7 @@ export const colors = {
   highlight: '#7DF9FF',
   gradient: gradientHighlight,
   font: {
-    white: '#fffafa',
+    white: '#e0e0e0',
     darkGrey: 'rgb(0,0,0,0.61)',
     lightGrey: '#9c9c9c',
     xlightGrey: '#bbb',
@@ -24,7 +24,7 @@ export const colors = {
   },
   border: {
     gradient: css`
-      border-bottom: 2px solid;
+      border: 2px solid;
       border-image: ${gradientHighlight} 10;
     `
   }

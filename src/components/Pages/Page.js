@@ -7,7 +7,7 @@ const Page = styled.div`
   margin-left: ${sizes.sidebarWidth.desktop};
   position: relative;
   background: ${colors.background};
-  padding: 150px 65px;
+  padding: 130px 65px;
   min-height: 100vh;
 
   ${ media.handheld`

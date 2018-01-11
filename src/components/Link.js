@@ -7,12 +7,13 @@ const BaseLink = css`
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  color: inherit;
+  color: ${props => props.color || 'inherit' };
+  z-index: 3;
 `;
 
 const GatsbyLink = styled(gatsbyLink)`
   ${BaseLink};
-  color: ${props => props.color || colors.font.darkGrey };
+  
   ${props => props.active ? colors.font.gradient : ''};
   /* ${props => props.active ? colors.border.gradient : ''}; */
 
@@ -37,6 +38,5 @@ const Link = ({ children, to, href, active, handleClick, ...rest }) =>
         {children}
       </GatsbyLink>
     );
-
 
 export default Link;
