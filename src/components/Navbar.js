@@ -20,6 +20,8 @@ const NavbarWrapper = styled.header`
   height: 50px;
   color: ${props => props.mobileNavActive ? 'black' : 'white'};
   padding: 0 20px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 `;
 
 const NavRight = styled.div`
