@@ -23,10 +23,7 @@ const GatsbyLink = styled(gatsbyLink)`
   }
 `;
 
-const NormalLink = styled.a.attrs({
-  to: null,
-  active: false
-})`
+const NormalLink = styled.a`
   ${BaseLink}
 `;
 

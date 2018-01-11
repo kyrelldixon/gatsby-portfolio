@@ -1,8 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
-import Link from './Link';
+import styled, { keyframes } from 'styled-components';
 import { withPrefix } from 'gatsby-link';
 import { media } from '../utils/media';
+import Link from './Link';
+import Animated from './Animated';
+
+const fader = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.5rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
 
 const NavWrapper = styled.nav`
   flex-basis: 50%;
@@ -12,13 +24,9 @@ const NavWrapper = styled.nav`
     flex-basis: auto;
     text-align: center;
     font-size: 1.7em;
+    animation: ${fader} 400ms ease-in;
   `}
-  /* ${ media.tablet`
-    width: 100%;
-    flex-basis: auto;
-    text-align: center;
-    font-size: 1.7em;
-  `} */
+
   color: rgba(0,0,0,0.65);
 `;
 const NavItems = styled.ul`

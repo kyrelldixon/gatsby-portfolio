@@ -55,7 +55,7 @@ const Navbar = ({ location, handleClick, mobileNavActive }) => (
       <MenuToggle onClick={handleClick}>Menu</MenuToggle>
     </NavLeft>
     <NavCenter>
-      <Logo><Link color="inherit" to="/">Logo</Link></Logo>
+      <Logo><Link active={false} color="inherit" to="/">Logo</Link></Logo>
     </NavCenter>
     <NavRight>
       <Link to={null} href="mailto:hello@kyrelldixon.com">Email</Link>

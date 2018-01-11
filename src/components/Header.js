@@ -1,9 +1,31 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { media } from '../utils/media';
 import { sizes } from '../utils/sizes';
 
 import Nav from './Nav';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    background-color: black;
+  }
+  to {
+    opacity: 1;
+    background-color: white;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+    background-color: white;
+  }
+  to {
+    opacity: 0;
+    background-color: black;
+  }
+`;
 
 const HeaderWrapper = styled.header`
   display: flex;
@@ -27,6 +49,7 @@ const HeaderWrapper = styled.header`
     background-color: white;
     width: 100%;
     min-height: 100vh;
+    animation: 400ms ${props => props.mobileNavActive ? fadeIn : fadeOut} ease-in;
   `}
 `;
 const HeaderTop = styled.div`
