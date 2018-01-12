@@ -10,6 +10,7 @@ export const colors = {
   font: {
     white: '#fff',
     offWhite: '#e0e0e0',
+    grey: '#7e7e7e',
     darkGrey: 'rgb(0,0,0,0.61)',
     lightGrey: '#9c9c9c',
     xlightGrey: '#bbb',

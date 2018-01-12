@@ -83,6 +83,10 @@ const HeaderBottom = styled.div`
   `}
 `;
 
+const EmailWrapper = styled.div`
+  font-size: .8em;
+`;
+
 const Header = ({ location, mobileNavActive, handleClick }) => (
   <HeaderWrapper mobileNavActive={mobileNavActive}>
     <HeaderTop>
@@ -98,7 +102,9 @@ const Header = ({ location, mobileNavActive, handleClick }) => (
       <HeaderDetails>
         For more info or to see if my services can help your business, you can contact me at:
       </HeaderDetails>
-      <Email />
+      <EmailWrapper>
+        <Email />
+      </EmailWrapper>
     </HeaderBottom>
   </HeaderWrapper>
 )
