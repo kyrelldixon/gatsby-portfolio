@@ -15,12 +15,9 @@ const GatsbyLink = styled(gatsbyLink)`
   ${BaseLink};
   
   ${props => props.active ? colors.font.gradient : ''};
-  /* ${props => props.active ? colors.border.gradient : ''}; */
-
 
   &:hover {
     ${colors.font.gradient}
-    /* ${colors.border.gradient} */
   }
 `;
 
