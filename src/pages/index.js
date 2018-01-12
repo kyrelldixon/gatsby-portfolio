@@ -31,6 +31,8 @@ const ButtonLink = styled(Link)`
   font-weight: bold;
   font-size: 0.9em;
   letter-spacing: 0.1em;
+  ${colors.border.gradient};
+  ${colors.font.gradient};
 
   &:hover {
     -webkit-text-fill-color: inherit;
@@ -41,9 +43,6 @@ const ButtonLink = styled(Link)`
     margin: 0 auto;
     font-size: 0.8em;
   `}
-
-  ${colors.border.gradient};
-  ${colors.font.gradient};
 `;
 
 const Home = () => (

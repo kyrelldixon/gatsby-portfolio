@@ -14,7 +14,7 @@ import '../utils/global-styles';
 const AppWrapper = styled.div`
   height: 100%;
   width: 100%;
-`
+`;
 
 class App extends Component {
   constructor(props) {
