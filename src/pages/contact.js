@@ -5,6 +5,7 @@ import PageDescription from '../components/Pages/PageDescription';
 import PageDetails from '../components/Pages/PageDetails';
 import Animated from '../components/Animated';
 import Link from '../components/Link';
+import Icon from '../components/Icon';
 import { colors } from '../utils/colors';
 import { media } from '../utils/media';
 
@@ -52,11 +53,12 @@ const Name = styled.h3`
   `}
 `;
 
-const SocialMedia = styled.div`
+const SocialMedia = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-top: -1em;
+  list-style: none;
 
   ${ media.handheld`
     width: 100%;
@@ -67,11 +69,16 @@ const SocialMedia = styled.div`
   `}
 `;
 
-const SocialMediaItem = styled.a`
+const SocialMediaItem = styled.li`
   text-decoration: none;
-  margin-bottom: .6em;
+  margin-bottom: 1.5em;
   text-transform: uppercase;
-  font-size: .89em;
+  font-size: .8em;
+  letter-spacing: 0.1em;
+
+  &:hover {
+    color: ${colors.highlight};
+  }
 `;
 
 const Contact = () => (
@@ -95,10 +102,26 @@ const Contact = () => (
         </ContactItem>
         <ContactItem>
           <SocialMedia>
-            <SocialMediaItem><Link>LinkedIn</Link></SocialMediaItem>
-            <SocialMediaItem><Link>Twitter</Link></SocialMediaItem>
-            <SocialMediaItem><Link>Github</Link></SocialMediaItem>
-            <SocialMediaItem><Link>Instagram</Link></SocialMediaItem>
+            <SocialMediaItem>
+              <Link to={null} href="https://www.linkedin.com" target="_blank">
+                <Icon icon="fab fa-linkedin fa-fw" />LinkedIn
+              </Link>
+            </SocialMediaItem>
+            <SocialMediaItem>
+              <Link to={null} href="https://www.twitter.com" target="_blank">
+                <Icon icon="fab fa-twitter fa-fw" />Twitter
+              </Link>
+            </SocialMediaItem>
+            <SocialMediaItem>
+              <Link to={null} href="https://www.github.com/kyrelldixon" target="_blank">
+                <Icon icon="fab fa-github fa-fw" />GitHub
+              </Link>
+            </SocialMediaItem>
+            <SocialMediaItem>
+              <Link to={null} href="https://www.instagram.com" target="_blank">
+                <Icon icon="fab fa-instagram fa-fw" />Instagram
+              </Link>
+            </SocialMediaItem>
           </SocialMedia>
         </ContactItem>
       </ContactDetails>
