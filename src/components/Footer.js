@@ -6,6 +6,8 @@ import { colors } from '../utils/colors';
 import Email from './Email';
 import PageDetails from './Pages/PageDetails';
 import PageTitle from './Pages/PageTitle';
+import Link from './Link';
+import Icon from './Icon';
 
 const FooterWrapper = styled.footer`
   display: none;
@@ -34,12 +36,7 @@ const SocialMedia = styled.div`
   justify-content: space-around;
   width: 100%;
   height: 50px;
-`;
-
-const SocialMediaIcon = styled.i.attrs({
-  className: props => props.icon || ""
-})`
-
+  margin-top: 0.8em;
 `;
 
 const Footer = () => {
@@ -53,10 +50,10 @@ const Footer = () => {
       </Details>
       <Email />
       <SocialMedia>
-        <SocialMediaIcon icon="fab fa-facebook fa-fw"/>
-        <SocialMediaIcon icon="fab fa-twitter fa-fw" />
-        <SocialMediaIcon icon="fab fa-github fa-fw" />
-        <SocialMediaIcon icon="fab fa-instagram fa-fw" />
+        <Link color={colors.font.grey} to={null} href="https://www.linkedin.com" target="_blank"><Icon icon="fab fa-linkedin fa-fw"/></Link>
+        <Link color={colors.font.grey} to={null} href="https://www.twitter.com" target="_blank"><Icon icon="fab fa-twitter fa-fw" /></Link>
+        <Link color={colors.font.grey} to={null} href="https://www.github.com/kyrelldixon" target="_blank"><Icon icon="fab fa-github fa-fw" /></Link>
+        <Link color={colors.font.grey} to={null} href="https://www.instagram.com" target="_blank"><Icon icon="fab fa-instagram fa-fw" /></Link>
       </SocialMedia>
     </FooterWrapper>
   )

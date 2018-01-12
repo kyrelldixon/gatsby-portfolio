@@ -41,7 +41,9 @@ class App extends Component {
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
-        />
+        >
+          <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+        </Helmet>
         <Navbar handleClick={this.handleClick} mobileNavActive={mobileNavActive}/>
         <Header handleClick={this.handleClick} mobileNavActive={mobileNavActive} location={pathname}/>
         <Page>

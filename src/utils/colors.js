@@ -5,7 +5,7 @@ const gradientBlack = 'linear-gradient(#121212, #242424)';
 
 export const colors = {
   background: gradientBlack,
-  highlight: '#7DF9FF',
+  highlight: '#02aab0',
   gradient: gradientHighlight,
   font: {
     white: '#fff',
