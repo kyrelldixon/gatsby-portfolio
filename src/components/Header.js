@@ -38,7 +38,7 @@ const HeaderWrapper = styled.header`
   left: 0;
   bottom: 0;
   width: ${sizes.sidebarWidth.desktop};
-  height: 100%;
+  min-height: 100%;
   padding: 30px 40px;
   overflow-y: scroll;
 
@@ -55,6 +55,7 @@ const HeaderWrapper = styled.header`
   `}
 `;
 const HeaderTop = styled.div`
+  display: block;
   flex-basis: 25%;
 
   ${ media.handheld`
@@ -71,6 +72,7 @@ const Logo = styled.h1`
   color: ${colors.font.black};
 `;
 const HeaderDetails = styled.ul`
+  display: block;
   color: ${colors.font.xlightGrey};
   font-size: .8em;
   line-height: 1.6em;
@@ -78,9 +80,8 @@ const HeaderDetails = styled.ul`
   list-style: none;
 `;
 
-const HeaderDetail = styled.li`
+const HeaderDetail = styled.li``;
 
-`
 const HeaderBottom = styled.div`
   flex-basis: 25%;
 
