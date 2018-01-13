@@ -15,11 +15,11 @@ const Work = () => (
       <PageTitle>Portfolio</PageTitle>
     </Animated>
     <Animated delay={150}>
-      <PageDescription>This is a description of the page below</PageDescription>
+      <PageDescription>Seeing is believing.</PageDescription>
     </Animated>
     <Animated delay={300}>
       <PageDetails>
-        This is where I put all my work. I do stuff.
+        Here is a list of the projects I've curated over the years. 
       </PageDetails>
     </Animated>
   </WorkWrapper>

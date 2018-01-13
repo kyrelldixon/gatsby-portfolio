@@ -15,11 +15,11 @@ const Services = () => (
       <PageTitle>Services</PageTitle>
     </Animated>
     <Animated delay={150}>
-      <PageDescription>This is a description of the page below</PageDescription>
+      <PageDescription>I offer a wide array of services to fit your needs.</PageDescription>
     </Animated>
     <Animated delay={300}>
       <PageDetails>
-        This is where I explain to you what I can do to help you. That's why you're here.
+        Here are a few ways I can help.
       </PageDetails>
     </Animated>
   </ServicesWrapper>

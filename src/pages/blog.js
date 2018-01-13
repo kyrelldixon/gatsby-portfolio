@@ -16,12 +16,13 @@ const Blog = () => (
     </Animated>
     
     <Animated delay={150}>
-      <PageDescription>This is a description of the page below</PageDescription>
+      <PageDescription>Content is key.</PageDescription>
     </Animated>
 
     <Animated delay={300}>
       <PageDetails>
-        This is where I enlightenment begins. I write stuff, you become a little hairy Buddha.
+        This is primarily an outlet for my thoughts on tech, psychology, and anything that catches my attention. <br /><br />
+        If you see anything that interests you, leave a comment. I always reply.
       </PageDetails>
     </Animated>
     
