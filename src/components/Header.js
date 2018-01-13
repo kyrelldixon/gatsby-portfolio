@@ -85,6 +85,7 @@ const HeaderBottom = styled.div`
 
 const EmailWrapper = styled.div`
   font-size: .8em;
+  color: ${colors.font.darkGrey};
 `;
 
 const Header = ({ location, mobileNavActive, handleClick }) => (
@@ -103,7 +104,7 @@ const Header = ({ location, mobileNavActive, handleClick }) => (
         For more info or to see if my services can help your business, you can contact me at:
       </HeaderDetails>
       <EmailWrapper>
-        <Email />
+        <Email color="inherit"/>
       </EmailWrapper>
     </HeaderBottom>
   </HeaderWrapper>

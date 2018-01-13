@@ -48,7 +48,7 @@ const Footer = () => {
       <Details>
         For more information, or to have a casual chat about what I do, contact me at: 
       </Details>
-      <Email />
+      <Email color="inherit"/>
       <SocialMedia>
         <Link color={colors.font.grey} to={null} href="https://www.linkedin.com" target="_blank"><Icon icon="fab fa-linkedin fa-fw"/></Link>
         <Link color={colors.font.grey} to={null} href="https://www.twitter.com" target="_blank"><Icon icon="fab fa-twitter fa-fw" /></Link>
