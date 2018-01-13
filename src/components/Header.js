@@ -68,6 +68,7 @@ const Logo = styled.h1`
   letter-spacing: -0.01em;
   word-spacing: -0.1em;
   font-weight: bold;
+  color: ${colors.font.black};
 `;
 const HeaderDetails = styled.p`
   color: ${colors.font.xlightGrey};
@@ -104,7 +105,7 @@ const Header = ({ location, mobileNavActive, handleClick }) => (
         For more info or to see if my services can help your business, you can contact me at:
       </HeaderDetails>
       <EmailWrapper>
-        <Email color={colors.font.darkGrey}/>
+        <Email color={"inherit"}/>
       </EmailWrapper>
     </HeaderBottom>
   </HeaderWrapper>

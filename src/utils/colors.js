@@ -11,10 +11,10 @@ export const colors = {
     white: '#fff',
     offWhite: '#e0e0e0',
     grey: '#7e7e7e',
-    darkGrey: 'rgb(0,0,0,0.61)',
+    darkGrey: 'rgba(0,0,0,0.61)',
     lightGrey: '#9c9c9c',
     xlightGrey: '#bbb',
-    black: 'rgb(0,0,0,0.9)',
+    black: '#303030',
     gradient: css`
       /* background: linear-gradient(#4cb8c4, #3cd3ad); */
       /* background: linear-gradient(-45deg, #1a2980, #26d0ce); */
