@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { withPrefix } from 'gatsby-link';
 import { media } from '../utils/media';
+import { colors } from '../utils/colors';
 import Link from './Link';
 import Animated from './Animated';
 
@@ -25,7 +26,8 @@ const NavWrapper = styled.nav`
     flex-basis: auto;
     text-align: center;
     font-size: 1.7em;
-    animation: ${fader} 400ms ease-in;
+    animation: ${fader} 400ms ease-in-out;
+    background-color: ${colors.font.white};
   `}
 
   color: rgba(0,0,0,0.65);
@@ -55,7 +57,7 @@ const NavItem = styled.li`
 
 const Nav = ({ location, mobileNavActive, handleClick }) => (
   <NavWrapper mobileNavActive={mobileNavActive} onClick={handleClick}>
-    <NavItems onClick={handleClick}>
+    <NavItems>
       <NavItem>
         <Link
           active={location === withPrefix("/")}

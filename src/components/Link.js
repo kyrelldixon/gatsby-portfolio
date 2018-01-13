@@ -8,7 +8,6 @@ const BaseLink = css`
   text-decoration: none;
   cursor: pointer;
   color: ${props => props.color || 'inherit' };
-  z-index: 3;
 `;
 
 const GatsbyLink = styled(gatsbyLink)`
