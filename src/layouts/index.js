@@ -21,16 +21,34 @@ class App extends Component {
     super(props);
   }
   
-  state = { mobileNavActive: false }
+  state = { 
+    mobileNavActive: false,
+    atTop: false
+  }
 
   handleClick = () => {
     const { mobileNavActive } = this.state;
     this.setState({ mobileNavActive: !mobileNavActive });
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  };
+
+  handleScroll = ({ pageY }) => {
+    // number represents the y value for window
+    // 0-5 will be the acceptable range for top of window
+    const pageTop = 5;
+    this.setState({ atTop: (pageY <= pageTop)});
+  };
+
   render() {
     const { pathname } = this.props.location;
-    const { mobileNavActive } = this.state;
+    const { mobileNavActive, atTop } = this.state;
 
     return (
 
@@ -44,7 +62,7 @@ class App extends Component {
         >
           <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
         </Helmet>
-        <Navbar handleClick={this.handleClick} mobileNavActive={mobileNavActive}/>
+        <Navbar atTop={atTop} handleClick={this.handleClick} mobileNavActive={mobileNavActive}/>
         <Header handleClick={this.handleClick} mobileNavActive={mobileNavActive} location={pathname}/>
         <Page>
           {this.props.children()}
