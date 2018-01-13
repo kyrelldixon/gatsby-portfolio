@@ -48,15 +48,14 @@ const ButtonLink = styled(Link)`
 const Home = () => (
   <HomeWrapper>
     <Animated>
-      <PageTitle>Home</PageTitle>
+      <PageTitle>Hi, I'm Kyrell</PageTitle>
     </Animated>
     <Animated delay={150}>
-      <PageDescription>This is a description of the page below</PageDescription>
+      <PageDescription>I help businesses and entreprenuers develop and execute vision.</PageDescription>
     </Animated>
     <Animated delay={300}>
       <PageDetails>
-        This is the base of operations, the homepage.
-        This is where I get your attention. BANG! Got it? Good.
+        If you're ready to get to work, let's get in touch. Otherwise, check out some of my work.
       </PageDetails>
     </Animated>
     <Animated delay={450}>

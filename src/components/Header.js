@@ -70,12 +70,17 @@ const Logo = styled.h1`
   font-weight: bold;
   color: ${colors.font.black};
 `;
-const HeaderDetails = styled.p`
+const HeaderDetails = styled.ul`
   color: ${colors.font.xlightGrey};
   font-size: .8em;
   line-height: 1.6em;
   margin-bottom: 1.4em;
+  list-style: none;
 `;
+
+const HeaderDetail = styled.li`
+
+`
 const HeaderBottom = styled.div`
   flex-basis: 25%;
 
@@ -94,15 +99,15 @@ const Header = ({ location, mobileNavActive, handleClick }) => (
     <HeaderTop>
       <Logo>K. Dixon</Logo>
       <HeaderDetails>
-        Growth Hacker<br />
-        Front-end Developer<br />
-        Some Third Detail About Me
+        <HeaderDetail>Growth Hacker</HeaderDetail>
+        <HeaderDetail>Front-end Developer</HeaderDetail>
+        <HeaderDetail>Marketing and Brand Specialist</HeaderDetail>
       </HeaderDetails>
     </HeaderTop>
     <Nav handleClick={handleClick} mobileNavActive={mobileNavActive} location={location}/>
     <HeaderBottom>
       <HeaderDetails>
-        For more info or to see if my services can help your business, you can contact me at:
+        <HeaderDetail>For more info or to see if my services can help your business, you can contact me at:</HeaderDetail>
       </HeaderDetails>
       <EmailWrapper>
         <Email color={"inherit"}/>
