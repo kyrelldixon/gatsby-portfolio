@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import Navbar from '../components/Navbar'
 import Page from '../components/Pages/Page';
 import Footer from '../components/Footer';
+import { colors } from '../utils/colors';
 
 import './normalize-7.0.0.css';
 import '../utils/global-styles';
@@ -14,6 +15,7 @@ import '../utils/global-styles';
 const AppWrapper = styled.div`
   height: 100%;
   width: 100%;
+  background: ${colors.font.white};
 `;
 
 class App extends Component {

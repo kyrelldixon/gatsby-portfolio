@@ -13,7 +13,7 @@ const NavbarWrapper = styled.header`
     align-items: center;
     position: fixed;
     width: 50px;
-    background-color: ${props => props.atTop ? 'transparent' : 'white'};;
+    background-color: ${props => props.atTop ? 'transparent' : colors.font.white};;
     width: 100%;
   `}
 

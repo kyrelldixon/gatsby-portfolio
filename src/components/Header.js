@@ -104,7 +104,7 @@ const Header = ({ location, mobileNavActive, handleClick }) => (
         For more info or to see if my services can help your business, you can contact me at:
       </HeaderDetails>
       <EmailWrapper>
-        <Email color="inherit"/>
+        <Email color={colors.font.darkGrey}/>
       </EmailWrapper>
     </HeaderBottom>
   </HeaderWrapper>
