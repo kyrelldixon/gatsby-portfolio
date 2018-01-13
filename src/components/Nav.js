@@ -17,6 +17,7 @@ const fader = keyframes`
 `;
 
 const NavWrapper = styled.nav`
+  display: block;
   flex-basis: 50%;
 
   ${ media.handheld`
@@ -34,6 +35,10 @@ const NavItems = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
+  ${ media.handheld`
+    align-items: center;
+  `}
 `;
 const NavItem = styled.li`
   list-style: none;
@@ -49,8 +54,8 @@ const NavItem = styled.li`
 `;
 
 const Nav = ({ location, mobileNavActive, handleClick }) => (
-  <NavWrapper mobileNavActive={mobileNavActive}>
-    <NavItems>
+  <NavWrapper mobileNavActive={mobileNavActive} onClick={handleClick}>
+    <NavItems onClick={handleClick}>
       <NavItem>
         <Link
           active={location === withPrefix("/")}
