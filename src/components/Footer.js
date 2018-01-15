@@ -50,10 +50,10 @@ const Footer = () => {
       </Details>
       <Email color="inherit"/>
       <SocialMedia>
-        <Link color={colors.font.grey} to={null} href="https://www.linkedin.com" target="_blank"><Icon icon="fab fa-linkedin fa-fw"/></Link>
-        <Link color={colors.font.grey} to={null} href="https://www.twitter.com" target="_blank"><Icon icon="fab fa-twitter fa-fw" /></Link>
+        <Link color={colors.font.grey} to={null} href="https://www.linkedin.com/in/kyrell-dixon-60a790120" target="_blank"><Icon icon="fab fa-linkedin fa-fw"/></Link>
+        <Link color={colors.font.grey} to={null} href="https://twitter.com/kyrell_dixon" target="_blank"><Icon icon="fab fa-twitter fa-fw" /></Link>
         <Link color={colors.font.grey} to={null} href="https://www.github.com/kyrelldixon" target="_blank"><Icon icon="fab fa-github fa-fw" /></Link>
-        <Link color={colors.font.grey} to={null} href="https://www.instagram.com" target="_blank"><Icon icon="fab fa-instagram fa-fw" /></Link>
+        {/* <Link color={colors.font.grey} to={null} href="https://www.instagram.com" target="_blank"><Icon icon="fab fa-instagram fa-fw" /></Link> */}
       </SocialMedia>
     </FooterWrapper>
   )

@@ -103,12 +103,12 @@ const Contact = () => (
         <ContactItem>
           <SocialMedia>
             <SocialMediaItem>
-              <Link to={null} href="https://www.linkedin.com" target="_blank">
+              <Link to={null} href="https://www.linkedin.com/in/kyrell-dixon-60a790120" target="_blank">
                 <Icon icon="fab fa-linkedin fa-fw" />LinkedIn
               </Link>
             </SocialMediaItem>
             <SocialMediaItem>
-              <Link to={null} href="https://www.twitter.com" target="_blank">
+              <Link to={null} href="https://twitter.com/kyrell_dixon" target="_blank">
                 <Icon icon="fab fa-twitter fa-fw" />Twitter
               </Link>
             </SocialMediaItem>
@@ -117,11 +117,11 @@ const Contact = () => (
                 <Icon icon="fab fa-github fa-fw" />GitHub
               </Link>
             </SocialMediaItem>
-            <SocialMediaItem>
+            {/* <SocialMediaItem>
               <Link to={null} href="https://www.instagram.com" target="_blank">
                 <Icon icon="fab fa-instagram fa-fw" />Instagram
               </Link>
-            </SocialMediaItem>
+            </SocialMediaItem> */}
           </SocialMedia>
         </ContactItem>
       </ContactDetails>
