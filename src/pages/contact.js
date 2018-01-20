@@ -10,6 +10,7 @@ import { colors } from '../utils/colors';
 import { media } from '../utils/media';
 
 import Email from '../components/Email';
+import InProgress from '../components/InProgress';
 
 const ContactWrapper = styled.div`
   color: white;
@@ -83,7 +84,7 @@ const SocialMediaItem = styled.li`
 
 const Contact = () => (
   <ContactWrapper>
-    <Animated>
+    {/* <Animated>
       <PageTitle>Contact</PageTitle>
     </Animated>
     <Animated delay={150}>
@@ -117,14 +118,12 @@ const Contact = () => (
                 <Icon icon="fab fa-github fa-fw" />GitHub
               </Link>
             </SocialMediaItem>
-            {/* <SocialMediaItem>
-              <Link to={null} href="https://www.instagram.com" target="_blank">
-                <Icon icon="fab fa-instagram fa-fw" />Instagram
-              </Link>
-            </SocialMediaItem> */}
           </SocialMedia>
         </ContactItem>
       </ContactDetails>
+    </Animated> */}
+    <Animated delay={150}>
+      <InProgress pageName="Contact" />
     </Animated>
   </ContactWrapper>
 )

@@ -62,31 +62,36 @@ const Nav = ({ location, mobileNavActive, handleClick }) => (
         <Link
           active={location === withPrefix("/")}
           to="/"
-          onClick={handleClick}>Home</Link>
+          onClick={handleClick}>Home
+        </Link>
       </NavItem>
       <NavItem>
         <Link
           active={location === withPrefix("/services")}
           to="/services"
-          onClick={handleClick}>Services</Link>
+          onClick={handleClick}>Services
+        </Link>
       </NavItem>
       <NavItem>
         <Link
           active={location === withPrefix("/work")}
           to="/work"
-          onClick={handleClick}>Portfolio</Link>
+          onClick={handleClick}>Portfolio
+        </Link>
       </NavItem>
       <NavItem>
         <Link
           active={location === withPrefix("/blog")}
           to="/blog"
-          onClick={handleClick}>Blog</Link>
+          onClick={handleClick}>Blog
+        </Link>
       </NavItem>
       <NavItem>
         <Link
           active={location === withPrefix("/contact")}
           to="/contact"
-          onClick={handleClick}>Contact</Link>
+          onClick={handleClick}>Contact
+        </Link>
       </NavItem>
     </NavItems>
   </NavWrapper>

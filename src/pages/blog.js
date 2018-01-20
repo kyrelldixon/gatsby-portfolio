@@ -4,6 +4,7 @@ import PageTitle from '../components/Pages/PageTitle';
 import PageDescription from '../components/Pages/PageDescription';
 import PageDetails from '../components/Pages/PageDetails';
 import Animated from '../components/Animated';
+import InProgress from '../components/InProgress';
 
 const BlogWrapper = styled.div`
   color: white;
@@ -11,7 +12,7 @@ const BlogWrapper = styled.div`
 
 const Blog = () => (
   <BlogWrapper>
-    <Animated>
+    {/* <Animated>
       <PageTitle>Blog</PageTitle>
     </Animated>
     
@@ -24,6 +25,10 @@ const Blog = () => (
         This is primarily an outlet for my thoughts on tech, psychology, and anything that catches my attention. <br /><br />
         If you see anything that interests you, leave a comment. I always reply.
       </PageDetails>
+    </Animated> */}
+
+    <Animated delay={150}>
+      <InProgress pageName="Blog" />
     </Animated>
     
   </BlogWrapper>

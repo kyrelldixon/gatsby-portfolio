@@ -4,6 +4,7 @@ import PageTitle from '../components/Pages/PageTitle';
 import PageDescription from '../components/Pages/PageDescription';
 import PageDetails from '../components/Pages/PageDetails';
 import Animated from '../components/Animated';
+import InProgress from '../components/InProgress';
 
 const ServicesWrapper = styled.div`
   color: white;
@@ -11,7 +12,7 @@ const ServicesWrapper = styled.div`
 
 const Services = () => (
   <ServicesWrapper>
-    <Animated>
+    {/* <Animated>
       <PageTitle>Services</PageTitle>
     </Animated>
     <Animated delay={150}>
@@ -21,6 +22,9 @@ const Services = () => (
       <PageDetails>
         Here are a few ways I can help.
       </PageDetails>
+    </Animated> */}
+    <Animated delay={150}>
+      <InProgress pageName="Services" />
     </Animated>
   </ServicesWrapper>
 )
