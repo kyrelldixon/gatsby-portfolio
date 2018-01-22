@@ -65,8 +65,6 @@ const MenuText = styled.p`
 `;
 
 const Navbar = ({ location, handleClick, mobileNavActive, atTop }) => {
-  console.log(`At top = ${atTop}`);
-  
   return (
     <NavbarWrapper atTop={atTop} mobileNavActive={mobileNavActive}>
       <NavLeft>
