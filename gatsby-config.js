@@ -2,7 +2,7 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Gatsby Portfolio`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,6 +14,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || ``,
         host: ``
       }
-    }
+    },
+    `gatsby-transformer-remark`
   ],
 }
