@@ -44,7 +44,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 // as a template component. The `context` is
                 // optional but is often necessary so the template
                 // can query data specific to each page.
-                path: `/products/${edge.node.title}/`,
+                path: `/posts/${edge.node.title}/`,
                 component: postTemplate,
                 context: {
                   id: edge.node.id,

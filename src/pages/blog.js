@@ -6,9 +6,25 @@ import PageDetails from '../components/Pages/PageDetails';
 import Animated from '../components/Animated';
 import InProgress from '../components/InProgress';
 import PostPreview from '../components/PostPreview';
+import { media } from '../utils/media';
 
 const BlogWrapper = styled.div`
   color: white;
+`;
+
+const PostLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 8.5em;
+
+  ${ media.handheld`
+    margin-top: 4.7em;
+  `}
+
+  ${ media.tablet`
+    margin-top: 6em;
+  `}
 `;
 
 class Blog extends Component {
@@ -31,10 +47,13 @@ class Blog extends Component {
           </PageDetails>
         </Animated>
 
-        <h3>Posts</h3>
-        {usProductEdges.map(({ node }, i) => (
-          <PostPreview node={node} key={node.id} />
-        ))}
+        <Animated delay={450}>
+          <PostLinks>
+            {usProductEdges.map(({ node }, i) => (
+              <PostPreview node={node} key={node.id} />
+            ))}
+          </PostLinks>
+        </Animated>
 
       </BlogWrapper>
     )
@@ -50,6 +69,7 @@ export const pageQuery = graphql`
         node {
           id
           title
+          datePublished
         }
       }
     }
