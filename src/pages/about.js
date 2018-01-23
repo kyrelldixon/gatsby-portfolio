@@ -6,17 +6,17 @@ import PageDetails from '../components/Pages/PageDetails';
 import Animated from '../components/Animated';
 import InProgress from '../components/InProgress';
 
-const ServicesWrapper = styled.div`
+const AboutWrapper = styled.div`
   color: white;
 `;
 
-const Services = () => (
-  <ServicesWrapper>
+const About = () => (
+  <AboutWrapper>
     {/* <Animated>
-      <PageTitle>Services</PageTitle>
+      <PageTitle>About</PageTitle>
     </Animated>
     <Animated delay={150}>
-      <PageDescription>I offer a wide array of services to fit your needs.</PageDescription>
+      <PageDescription>I offer a wide array of About to fit your needs.</PageDescription>
     </Animated>
     <Animated delay={300}>
       <PageDetails>
@@ -24,9 +24,9 @@ const Services = () => (
       </PageDetails>
     </Animated> */}
     <Animated delay={150}>
-      <InProgress pageName="Services" />
+      <InProgress pageName="About" />
     </Animated>
-  </ServicesWrapper>
+  </AboutWrapper>
 )
 
-export default Services;
+export default About;

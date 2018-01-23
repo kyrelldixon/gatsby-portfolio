@@ -12,6 +12,7 @@ export const colors = {
     offWhite: '#e0e0e0',
     grey: '#7e7e7e',
     darkGrey: 'rgba(0,0,0,0.61)',
+    xdarkGrey: '#3f3f3f',
     lightGrey: '#9c9c9c',
     xlightGrey: '#bbb',
     black: '#303030',

@@ -67,9 +67,9 @@ const Nav = ({ location, mobileNavActive, handleClick }) => (
       </NavItem>
       <NavItem>
         <Link
-          active={location === withPrefix("/services")}
-          to="/services"
-          onClick={handleClick}>Services
+          active={location === withPrefix("/about")}
+          to="/about"
+          onClick={handleClick}>About
         </Link>
       </NavItem>
       <NavItem>

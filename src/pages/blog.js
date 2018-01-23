@@ -7,6 +7,7 @@ import Animated from '../components/Animated';
 import InProgress from '../components/InProgress';
 import PostPreview from '../components/PostPreview';
 import { media } from '../utils/media';
+import { colors } from '../utils/colors';
 
 const BlogWrapper = styled.div`
   color: white;
@@ -17,9 +18,13 @@ const PostLinks = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-top: 8.5em;
+    
+    &:first-child {
+      border-top: 3px solid ${colors.font.xdarkGrey};;
+    }
 
   ${ media.handheld`
-    margin-top: 4.7em;
+    margin-top: 2.8em;
   `}
 
   ${ media.tablet`
