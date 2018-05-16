@@ -7,6 +7,7 @@ const PageDescription = styled.h1`
   letter-spacing: -.02em;
   margin: 1.1em 0 0.8em;
   color: ${colors.font.white};
+font-family: 'Bitter', serif;
 
   ${ media.handheld`
     text-align: center;

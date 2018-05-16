@@ -64,6 +64,7 @@ class App extends Component {
           ]}
         >
           <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+          <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet" /> 
         </Helmet>
         <Navbar atTop={atTop} handleClick={this.handleClick} mobileNavActive={mobileNavActive}/>
         <Header handleClick={this.handleClick} mobileNavActive={mobileNavActive} location={pathname}/>

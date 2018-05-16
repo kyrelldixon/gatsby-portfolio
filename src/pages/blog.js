@@ -28,7 +28,7 @@ const PostLinks = styled.div`
   `}
 
   ${ media.tablet`
-    margin-top: 6em;
+    margin-top: 4.45em;
   `}
 `;
 

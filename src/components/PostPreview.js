@@ -21,7 +21,7 @@ const ContentWrapper = styled.div`
 `;
 
 const Title = styled.h3`
-
+  margin-bottom: 0.18em;
 `;
 
 const DatePublished = styled.span`
